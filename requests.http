@@ -18,3 +18,13 @@ Content-Type: application/json
 }
 
 ### product update
+PATCH http://localhost:3000/products/4.json 
+Content-Type: application/json
+
+{
+  "id": "103",
+  "name": "iphone15",
+  "price": "1000",
+  "image_url": "apple.com",
+  "description": "usb-c"
+}
