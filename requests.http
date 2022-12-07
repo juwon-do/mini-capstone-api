@@ -1,4 +1,5 @@
-GET http://localhost:3000/get_product.json
+GET http://localhost:3000/products.json
+
 
 ###
-GET http://localhost:3000/ind_product/99.json
+GET http://localhost:3000/products/2.json
