@@ -28,4 +28,9 @@ class ProductsController < ApplicationController
     product.save
     render json: product.as_json
   end
+  def delete
+    product = Product.find_by(id: params[:id])
+    product.destroy
+    render json: product.as_json
+  end
 end

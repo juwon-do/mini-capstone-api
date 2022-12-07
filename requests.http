@@ -22,9 +22,12 @@ PATCH http://localhost:3000/products/4.json
 Content-Type: application/json
 
 {
-  "id": "103",
-  "name": "iphone15",
+  "id": "105",
+  "name": "iphone16",
   "price": "1000",
   "image_url": "apple.com",
   "description": "usb-c"
 }
+
+### product delete
+DELETE http://localhost:3000/products/21.json
