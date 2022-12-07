@@ -7,3 +7,14 @@ GET http://localhost:3000/products/2.json
 
 ### product create
 POST http://localhost:3000/products.json 
+Content-Type: application/json
+
+{
+  "input_id": "102",
+  "input_name": "civic",
+  "input_price": "20000",
+  "input_image_url": "www.google.com",
+  "input_description": "famous car"
+}
+
+### product update

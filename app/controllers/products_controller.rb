@@ -9,11 +9,11 @@ class ProductsController < ApplicationController
   end
   def create
     product = Product.new(
-      id: "101",
-      name: "car",
-      price: "30000",
-      image_url: "https://tesla-cdn.thron.com/delivery/public/image/tesla/8c26f779-11e5-4cfc-bd7c-dcd03b18ff88/bvlatuR/std/4096x2561/Model-X-Main-Hero-Desktop-LHD",
-      description: "Electric SUV Car"
+      id: params[:input_id],
+      name: params[:input_name],
+      price:params[:input_price],
+      image_url: params[:input_image_url],
+      description: params[:input_description]
     )
     product.save
     render json: product.as_json
