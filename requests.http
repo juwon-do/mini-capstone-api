@@ -10,15 +10,14 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "input_id": "102",
-  "input_name": "civic",
-  "input_price": "20000",
-  "input_image_url": "www.google.com",
-  "input_description": "famous car"
+  "name": "civic",
+  "price": "20000",
+  "image_url": "www.google.com",
+  "description": "famous car"
 }
 
 ### product update
-PATCH http://localhost:3000/products/4.json 
+PATCH http://localhost:3000/products/24.json 
 Content-Type: application/json
 
 {
