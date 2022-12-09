@@ -2,11 +2,13 @@ class Product < ApplicationRecord
   def friendly_created_at
     created_at.strftime("%B %e, %Y")
   end
+  def tax
+    price * 0.09
+  end
+  def total
+    price + tax
+  end
   def is_discounted?
-    if price.to_i < 10
-      p "true"
-    else
-      p "false"
-    end
+    price < 10
   end
 end
