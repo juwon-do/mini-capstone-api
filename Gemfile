@@ -49,3 +49,5 @@ end
 gem 'faker'
 
 gem 'rack-cors'
+
+gem 'jb'
