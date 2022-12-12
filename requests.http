@@ -3,29 +3,30 @@ GET http://localhost:3000/products.json
 
 
 ### product show
-GET http://localhost:3000/products/2.json
+GET http://localhost:3000/products/24.json
 
 ### product create
 POST http://localhost:3000/products.json 
 Content-Type: application/json
 
 {
-  "name": "civic",
+  "name": "civic2",
   "price": "20000",
   "image_url": "www.google.com",
-  "description": "famous car"
+  "description": "famous car",
+  "inventory": 5
 }
 
 ### product update
-PATCH http://localhost:3000/products/24.json 
+PATCH http://localhost:3000/products/1.json 
 Content-Type: application/json
 
 {
-  "id": "105",
   "name": "iphone16",
   "price": "1000",
   "image_url": "apple.com",
-  "description": "usb-c"
+  "description": "usb-c",
+  "inventory": "50"
 }
 
 ### product delete

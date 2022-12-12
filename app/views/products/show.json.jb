@@ -8,5 +8,6 @@
   updated_at: @product.updated_at,
   friendly_created_at: @product.friendly_created_at,
   tax: @product.tax,
-  total: @product.total
+  total: @product.total,
+  inventory: @product.inventory
 }
