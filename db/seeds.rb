@@ -102,3 +102,4 @@ Product.create!([
   {id: 105, name: "civic", price: "20000.0", image_url: "www.google.com", description: "famous car", created_at: "2022-12-09 19:56:30", updated_at: "2022-12-09 19:56:30"},
   {id: 1, name: "iphone16", price: "1000.0", image_url: "apple.com", description: "usb-c", created_at: "2022-12-06 20:21:17", updated_at: "2022-12-09 20:26:01"}
 ])
+
