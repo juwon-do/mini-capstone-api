@@ -9,5 +9,6 @@
   friendly_created_at: @product.friendly_created_at,
   tax: @product.tax,
   total: @product.total,
-  inventory: @product.inventory
+  inventory: @product.inventory,
+  supplier: @product.supplier
 }

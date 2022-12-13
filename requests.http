@@ -3,7 +3,7 @@ GET http://localhost:3000/products.json
 
 
 ### product show
-GET http://localhost:3000/products/24.json
+GET http://localhost:3000/products/22.json
 
 ### product create
 POST http://localhost:3000/products.json 

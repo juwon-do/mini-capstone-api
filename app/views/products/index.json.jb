@@ -8,6 +8,7 @@
     created_at: product.created_at,
     updated_at: product.updated_at,
     friendly_created_at: product.friendly_created_at,
-    inventory: product.inventory
+    inventory: product.inventory,
+    supplier: product.supplier
   }
 end
