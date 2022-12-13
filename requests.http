@@ -10,7 +10,7 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "civic2",
+  "name": "civic3",
   "price": "20000",
   "image_url": "www.google.com",
   "description": "famous car",
