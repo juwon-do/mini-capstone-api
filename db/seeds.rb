@@ -103,3 +103,12 @@ Product.create!([
   {id: 1, name: "iphone16", price: "1000.0", image_url: "apple.com", description: "usb-c", created_at: "2022-12-06 20:21:17", updated_at: "2022-12-09 20:26:01"}
 ])
 
+products = Product.all
+
+products.each do |product|
+  
+  image = Image.new(
+    url: Faker::Avatar.image,
+    product_id: product.id
+  )
+end
