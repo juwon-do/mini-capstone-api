@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_admin, only: [:create, :update, :destroy]
+ 
   def index
     @products = Product.all
     # render json: products.as_json
@@ -13,9 +15,10 @@ class ProductsController < ApplicationController
     product = Product.new(
       name: params[:name],
       price:params[:price],
-      image_url: params[:image_url],
+      # image_url: params[:image_url],
       description: params[:description],
-      inventory: params[:inventory]
+      inventory: params[:inventory],
+      supplier_id: params[:supplier_id]
     )
     
     if product.save
@@ -28,7 +31,7 @@ class ProductsController < ApplicationController
     product = Product.find_by(id: params[:id])
     product.name = params[:name]
     product.price = params[:price]
-    product.image_url = params[:image_url]
+    # product.image_url = params[:image_url]
     product.description = params[:description]
     product.inventory = params[:inventory]
     product.save

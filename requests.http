@@ -1,24 +1,28 @@
 ### product index
 GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzExMzE2ODV9.s6swWJVnRyDMPjdX-1yn5dmWv5p8Ioep9yTM556ghhs
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0OTd9.zQ-gjIa0PMlO5ziI-pFl3rPNqaXE6qaruUGnoTFKWuw
 
 
 ### product show
 GET http://localhost:3000/products/22.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0OTd9.zQ-gjIa0PMlO5ziI-pFl3rPNqaXE6qaruUGnoTFKWuw
 
 ### product create
 POST http://localhost:3000/products.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0OTd9.zQ-gjIa0PMlO5ziI-pFl3rPNqaXE6qaruUGnoTFKWuw
 Content-Type: application/json
 
 {
-  "name": "civic3",
+  "name": "civic4",
   "price": "20000",
   "description": "famous car",
-  "inventory": 5
+  "inventory": 5,
+  "supplier_id": 1
 }
 
 ### product update
 PATCH http://localhost:3000/products/1.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0OTd9.zQ-gjIa0PMlO5ziI-pFl3rPNqaXE6qaruUGnoTFKWuw
 Content-Type: application/json
 
 {
@@ -30,6 +34,7 @@ Content-Type: application/json
 
 ### product delete
 DELETE http://localhost:3000/products/21.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0OTd9.zQ-gjIa0PMlO5ziI-pFl3rPNqaXE6qaruUGnoTFKWuw
 
 ### User create signup
 POST http://localhost:3000/users.json
@@ -51,3 +56,24 @@ Content-Type: application/json
   "password": "password"
 }
 
+### Orders create
+POST http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0OTd9.zQ-gjIa0PMlO5ziI-pFl3rPNqaXE6qaruUGnoTFKWuw
+Content-Type: application/json
+
+{
+  "user_id": "5",
+  "product_id": "2",
+  "quantity": "3",
+  "subtotal": "40.33",
+  "tax": "4",
+  "total": "44.33"
+}
+
+### order show
+GET http://localhost:3000/orders/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0OTd9.zQ-gjIa0PMlO5ziI-pFl3rPNqaXE6qaruUGnoTFKWuw
+
+### order index
+GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0OTd9.zQ-gjIa0PMlO5ziI-pFl3rPNqaXE6qaruUGnoTFKWuw
