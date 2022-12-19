@@ -4,7 +4,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0O
 
 
 ### product show
-GET http://localhost:3000/products/22.json
+GET http://localhost:3000/products/3.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0OTd9.zQ-gjIa0PMlO5ziI-pFl3rPNqaXE6qaruUGnoTFKWuw
 
 ### product create
