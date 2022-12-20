@@ -5,8 +5,8 @@ class OrdersController < ApplicationController
     @product = Product.find_by(id: params[:product_id])
     order = Order.new(
       user_id: current_user.id,
-      product_id: params[:product_id],
-      quantity: params[:product_id],
+      # product_id: params[:product_id],
+      # quantity: params[:product_id],
       subtotal: @product.price * params[:product_id].to_f,
       tax: @product.tax * params[:product_id].to_f,
       total: @product.total * params[:product_id].to_f

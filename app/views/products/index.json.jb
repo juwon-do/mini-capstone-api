@@ -9,6 +9,7 @@
     friendly_created_at: product.friendly_created_at,
     inventory: product.inventory,
     supplier: product.supplier,
-    categories: product.categories
+    categories: product.categories,
+     images: product.images
   }
 end

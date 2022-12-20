@@ -9,15 +9,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0O
 
 ### product create
 POST http://localhost:3000/products.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0OTd9.zQ-gjIa0PMlO5ziI-pFl3rPNqaXE6qaruUGnoTFKWuw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzE2NDAyNDF9.KCvwH5MJu5QRQQl5Fd01htOwmMTwoVkoJu4M022MNhg
 Content-Type: application/json
 
 {
-  "name": "civic4",
-  "price": "20000",
-  "description": "famous car",
-  "inventory": 5,
-  "supplier_id": 1
+  "name": "newest fedora",
+  "price": 32,
+  "description": "test description",
+  "quantity": 15,
+  "images": ["https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/A_fedora_hat%2C_made_by_Borsalino.jpg/1200px-A_fedora_hat%2C_made_by_Borsalino.jpg", "https://www.bon-clic-bon-genre.us/photo/px1844-noir-1_20221026111212.jpg", "https://cdn.shopify.com/s/files/1/1310/3673/products/4-carbon-fiber-fedora-hat_1400x.jpg?v=1496777574"],
+  "supplier_id": 2
 }
 
 ### product update
@@ -58,7 +59,7 @@ Content-Type: application/json
 
 ### Orders create
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0OTd9.zQ-gjIa0PMlO5ziI-pFl3rPNqaXE6qaruUGnoTFKWuw
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzE1NjgxNDZ9.jw8-V1zioBr89U3GOAhi0npZwIFUsE6OiX4wch3eMKA
 Content-Type: application/json
 
 {
@@ -77,3 +78,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0O
 ### order index
 GET http://localhost:3000/orders.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzEyOTQ0OTd9.zQ-gjIa0PMlO5ziI-pFl3rPNqaXE6qaruUGnoTFKWuw
+
+###
+POST http://localhost:3000/carted_products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzE1NjgxNDZ9.jw8-V1zioBr89U3GOAhi0npZwIFUsE6OiX4wch3eMKA
+Content-Type: application/json
+
+{
+  "product_id": "2",
+  "user_id": "1",
+  "order_id": "2",
+  "status": "True"
+}

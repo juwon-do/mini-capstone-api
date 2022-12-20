@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
     render template: "products/show"
   end
   def create
-    product = Product.new(
+    @product = Product.new(
       name: params[:name],
       price:params[:price],
       # image_url: params[:image_url],
@@ -21,8 +21,15 @@ class ProductsController < ApplicationController
       supplier_id: params[:supplier_id]
     )
     
-    if product.save
-      render json: product.as_json
+    if @product.save
+      params[:images].each do |image|
+        image = Image.new(
+          url: image,
+          product_id: @product.id
+        )
+        image.save
+      end
+      render template: "products/show"
     else
       render json: {errors: product.errors.full_messages}
     end
