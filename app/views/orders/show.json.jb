@@ -1,0 +1,15 @@
+{
+  id: @order.id,
+  created_at: @order.created_at,
+  updated_at: @order.updated_at,
+  subtotal: @order.subtotal,
+  total: @order.total,
+  tax: @order.tax,
+  carted_products: @order.carted_products.map do |cp|
+    {
+      quantity: cp.quantity,
+      id: cp.id,
+      product: cp.product,
+    }
+  end
+}

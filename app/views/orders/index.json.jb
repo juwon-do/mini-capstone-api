@@ -1,0 +1,5 @@
+@orders.map do |order|
+  {
+    id: order.id
+  }
+end
